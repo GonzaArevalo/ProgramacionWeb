@@ -1,0 +1,36 @@
+body {
+    margin-top: 25px;
+    border: solid red 1px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+}
+/*
+header {
+    color: gray;
+
+}
+*/
+.titulo-principal {
+    color: gray;
+    text-align: center;
+}
+
+.p-justificado {
+    text-align: justify;
+
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+.centrar{
+    text-align: center;
+}
+
+ul {
+    margin-left: 80px;
+}
