@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de contacto</title>
+    <script type="text/javascript">
+        function validarFormulario() {
+            // Obtener los valores de los campos
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var mensaje = document.getElementById("mensaje").value;
+
+            // Validar que el nombre no esté vacío
+            if (nombre.trim() == "") {
+                alert("Por favor, ingresa tu nombre.");
+                return false;
+            }
+
+            // Validar que el email tenga un formato válido
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Por favor, ingresa un email válido.");
+                return false;
+            }
+
+            // Validar que el mensaje no esté vacío
+            if (mensaje.trim() == "") {
+                alert("Por favor, ingresa un mensaje.");
+                return false;
+            }
+
+            // Si todos los campos son válidos, devolver true para enviar el formulario
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de contacto</h1>
+    <form method="post" action="#" onsubmit="return validarFormulario();">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
